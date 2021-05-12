@@ -1,4 +1,4 @@
-<html ng-app=''>
+<html ng-app='MainApp' ng-controller='studentController'>
     <head>
         <Title>Programming Activity #3</Title>
         <script src='angular.min.js'></script>
@@ -6,34 +6,35 @@
 
     <body>
         <script>
+            const app = angular.module("MainApp",[]);
             function studentController($scope)
             {
                 $scope.student = {
-                    fName = "Dino Benedict",
-                    mName = "Infante",
-                    lName = "Villarin",
-                    strand = "STEM",
-                    gradeLevel = "12",
-                    school = "Perpetual Help System DALTA",
-                    math = 75,
-                    science = 75,
-                    english = 75,
-                    filipino = 75,
-                    tle = 75,
+                    fName: "Dino Benedict",
+                    mName: "Infante",
+                    lName: "Villarin",
+                    strand: "STEM",
+                    gradeLevel: "12",
+                    school: "Perpetual Help System DALTA",
+                    math: 75,
+                    science: 75,
+                    english: 75,
+                    filipino: 75,
+                    tle: 75,
 
-                    fullName = function()
+                    fullName: function()
                     {
                         var obj;
                         obj = $scope.student;
                         return obj.fname + " " + obj.mName + " " + obj.lName;
                     },
 
-                    schoolStatus = function()
+                    schoolStatus: function()
                     {
                         return strand + " " + gradeLevel + " " + school
                     },
 
-                    gradeStatus = function()
+                    gradeStatus: function()
                     {
                         totalAverage = (math + science + english + filipino + tle) / 5;
 
