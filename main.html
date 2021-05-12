@@ -7,8 +7,9 @@
     <body>
         <script>
             const app = angular.module("MainApp",[]);
+            app.controller('studentController',studentController)
             function studentController($scope)
-            {
+            { 
                 $scope.student = {
                     fName: "Dino Benedict",
                     mName: "Infante",
@@ -23,37 +24,37 @@
                     tle: 75,
 
                     fullName: function()
-                    {
-                        var obj;
-                        obj = $scope.student;
+                    { 
+                        const obj = $scope.student;
                         return obj.fName + " " + obj.mName + " " + obj.lName;
                     },
 
                     schoolStatus: function()
                     {
-                        return strand + " " + gradeLevel + " " + school
-                    },
+                        const obj = $scope.student;
+                        return obj.strand + " " + obj.gradeLevel + " " + obj.school; 
+                    }, 
 
                     gradeStatus: function()
                     {
-                        totalAverage = (math + science + english + filipino + tle) / 5;
+                        var obj = $scope.student;
+                        totalAverage = (obj.math + obj.science + obj.english + obj.filipino + obj.tle) / 5;
 
                         if(totalAverage >= 75)
                         {
-                            return Passed
+                            return  'Average: ' + totalAverage + ', Passed'
                         }
                         else
                         {
-                            return Failed
+                            return 'Average: ' + totalAverage + ', Failed' 
                         }
-                    }
+                    } 
                 };
             }
         </script>
 
         <h1>Input Data:</h1>
         <br>
-        {{1}}
         <table>
             <th>Student's Name
                 <tr>
@@ -115,12 +116,12 @@
             </tr>
             <tr>
                 <td>Your strand, grade level and school is:
-                <td><span ng-bind="student.schoolStatus()"></span>
+                <td>{{student.schoolStatus()}}
             </tr>
             <th>Student's Grades:
             <tr>
                 <td>The status of your grades are:
-                <td><span ng-bind="student.fullName()"></span>
+                <td>{{student.gradeStatus()}}
             </tr>
         </table>
     </body>
