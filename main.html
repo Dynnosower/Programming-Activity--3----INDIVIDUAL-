@@ -1,5 +1,6 @@
-<html ng-app="">
+<html ng-app=''>
     <head>
+        <Title>Programming Activity #3</Title>
         <script src='angular.min.js'></script>
     </head>
 
@@ -108,7 +109,7 @@
             <th>Student Details:
             <tr>
                 <td>Your full name is:
-                <td>{{student.fname}}
+                <td>{{student.fullName()}}
             </tr>
             <tr>
                 <td>Your strand, grade level and school is:
@@ -120,6 +121,5 @@
                 <td><span ng-bind="student.fullName()"></span>
             </tr>
         </table>
-         
     </body>
 </html>
