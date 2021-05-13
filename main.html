@@ -1,4 +1,4 @@
-<html ng-app='MainApp' ng-controller='studentController'>
+<html ng-app='MainApp'>
     <head>
         <Title>Programming Activity #3</Title>
         <script src='angular.min.js'></script>
@@ -7,7 +7,9 @@
     <body>
         <script>
             const app = angular.module("MainApp",[]);
-            app.controller('studentController',studentController)
+            app.controller('studentController1',studentController);
+            app.controller('studentController2',studentController);
+            app.controller('studentController3',studentController);
             function studentController($scope)
             { 
                 $scope.student = {
@@ -51,78 +53,233 @@
                     } 
                 };
             }
+
         </script>
 
-        <h1>Input Data:</h1>
-        <br>
-        <table>
-            <th>Student's Name
-                <tr>
-                    <td>First Name:
-                    <td><input type="text" ng-model="student.fName">
-                </tr>
-                <tr>
-                    <td>Middle Name:
-                    <td><input type="text" ng-model="student.mName">
-                </tr>
-                <tr>
-                    <td>Last Name:
-                    <td><input type="text" ng-model="student.lName">
-                </tr>
-            <th>Student's School
-                <tr>
-                    <td>Strand:
-                    <td><input type="text" ng-model="student.strand">
-                </tr>
-                <tr>
-                    <td>Grade Level:
-                    <td><input type="text" ng-model="student.gradeLevel">
-                </tr>
-                <tr>
-                    <td>Name of School:
-                    <td><input type="text" ng-model="student.school">
-                </tr>
-            <th>Student's Grade
-                <tr>
-                    <td>Math:
-                    <td><input type="number" ng-model="student.math">
-                </tr>
-                <tr>
-                    <td>Science:
-                    <td><input type="number" ng-model="student.science">
-                </tr>
-                <tr>
-                    <td>English:
-                    <td><input type="number" ng-model="student.english">
-                </tr>
-                <tr>
-                    <td>Filipino:
-                    <td><input type="number" ng-model="student.filipino">
-                </tr>
-                <tr>
-                    <td>TLE:
-                    <td><input type="number" ng-model="student.tle">
-                </tr>
-        </table>
-        <br><br>
+        <div ng-controller='studentController1'>
+            
+            <h2>Student 1</h2>
+            <h3>Input Data:</h3>
+            <table>
+                <th>Student's Name
+                    <tr>
+                        <td>First Name:
+                        <td><input type="text" ng-model="student.fName">
+                    </tr>
+                    <tr>
+                        <td>Middle Name:
+                        <td><input type="text" ng-model="student.mName">
+                    </tr>
+                    <tr>
+                        <td>Last Name:
+                        <td><input type="text" ng-model="student.lName">
+                    </tr>
+                <th>Student's School
+                    <tr>
+                        <td>Strand:
+                        <td><input type="text" ng-model="student.strand">
+                    </tr>
+                    <tr>
+                        <td>Grade Level:
+                        <td><input type="text" ng-model="student.gradeLevel">
+                    </tr>
+                    <tr>
+                        <td>Name of School:
+                        <td><input type="text" ng-model="student.school">
+                    </tr>
+                <th>Student's Grade
+                    <tr>
+                        <td>Math:
+                        <td><input type="number" ng-model="student.math">
+                    </tr>
+                    <tr>
+                        <td>Science:
+                        <td><input type="number" ng-model="student.science">
+                    </tr>
+                    <tr>
+                        <td>English:
+                        <td><input type="number" ng-model="student.english">
+                    </tr>
+                    <tr>
+                        <td>Filipino:
+                        <td><input type="number" ng-model="student.filipino">
+                    </tr>
+                    <tr>
+                        <td>TLE:
+                        <td><input type="number" ng-model="student.tle">
+                    </tr>
+            </table>
+            <br><br>  
 
-        <h1>Output Data:</h1>
-        <br>
-        <table>
-            <th>Student Details:
-            <tr>
-                <td>Your full name is:
-                <td>{{student.fullName()}}
-            </tr>
-            <tr>
-                <td>Your strand, grade level and school is:
-                <td>{{student.schoolStatus()}}
-            </tr>
-            <th>Student's Grades:
-            <tr>
-                <td>The status of your grades are:
-                <td>{{student.gradeStatus()}}
-            </tr>
-        </table>
+            <h3>Output Data:</h3>
+            <table>
+                <th>Student Details:
+                <tr>
+                    <td>Full name:
+                    <td>{{student.fullName()}}
+                </tr>
+                <tr>
+                    <td>Strand, grade level and school:
+                    <td>{{student.schoolStatus()}}
+                </tr>
+                <th>Student's Grades:
+                <tr>
+                    <td>Grades status:
+                    <td>{{student.gradeStatus()}}
+                </tr>
+            </table>
+        </div>
+
+        <hr>
+
+        <div ng-controller='studentController2'>
+            
+            <h2>Student 2</h2>
+            <h3>Input Data:</h3>
+            <table>
+                <th>Student's Name
+                    <tr>
+                        <td>First Name:
+                        <td><input type="text" ng-model="student.fName">
+                    </tr>
+                    <tr>
+                        <td>Middle Name:
+                        <td><input type="text" ng-model="student.mName">
+                    </tr>
+                    <tr>
+                        <td>Last Name:
+                        <td><input type="text" ng-model="student.lName">
+                    </tr>
+                <th>Student's School
+                    <tr>
+                        <td>Strand:
+                        <td><input type="text" ng-model="student.strand">
+                    </tr>
+                    <tr>
+                        <td>Grade Level:
+                        <td><input type="text" ng-model="student.gradeLevel">
+                    </tr>
+                    <tr>
+                        <td>Name of School:
+                        <td><input type="text" ng-model="student.school">
+                    </tr>
+                <th>Student's Grade
+                    <tr>
+                        <td>Math:
+                        <td><input type="number" ng-model="student.math">
+                    </tr>
+                    <tr>
+                        <td>Science:
+                        <td><input type="number" ng-model="student.science">
+                    </tr>
+                    <tr>
+                        <td>English:
+                        <td><input type="number" ng-model="student.english">
+                    </tr>
+                    <tr>
+                        <td>Filipino:
+                        <td><input type="number" ng-model="student.filipino">
+                    </tr>
+                    <tr>
+                        <td>TLE:
+                        <td><input type="number" ng-model="student.tle">
+                    </tr>
+            </table>
+            <br><br>  
+
+            <h3>Output Data:</h3>
+            <table>
+                <th>Student Details:
+                <tr>
+                    <td>Your full name is:
+                    <td>{{student.fullName()}}
+                </tr>
+                <tr>
+                    <td>Your strand, grade level and school is:
+                    <td>{{student.schoolStatus()}}
+                </tr>
+                <th>Student's Grades:
+                <tr>
+                    <td>The status of your grades are:
+                    <td>{{student.gradeStatus()}}
+                </tr>
+            </table>
+        </div>
+
+        <hr>
+
+        <div ng-controller='studentController3'>
+            
+            <h2>Student 3</h2>
+            <h3>Input Data:</h3>
+            <table>
+                <th>Student's Name
+                    <tr>
+                        <td>First Name:
+                        <td><input type="text" ng-model="student.fName">
+                    </tr>
+                    <tr>
+                        <td>Middle Name:
+                        <td><input type="text" ng-model="student.mName">
+                    </tr>
+                    <tr>
+                        <td>Last Name:
+                        <td><input type="text" ng-model="student.lName">
+                    </tr>
+                <th>Student's School
+                    <tr>
+                        <td>Strand:
+                        <td><input type="text" ng-model="student.strand">
+                    </tr>
+                    <tr>
+                        <td>Grade Level:
+                        <td><input type="text" ng-model="student.gradeLevel">
+                    </tr>
+                    <tr>
+                        <td>Name of School:
+                        <td><input type="text" ng-model="student.school">
+                    </tr>
+                <th>Student's Grade
+                    <tr>
+                        <td>Math:
+                        <td><input type="number" ng-model="student.math">
+                    </tr>
+                    <tr>
+                        <td>Science:
+                        <td><input type="number" ng-model="student.science">
+                    </tr>
+                    <tr>
+                        <td>English:
+                        <td><input type="number" ng-model="student.english">
+                    </tr>
+                    <tr>
+                        <td>Filipino:
+                        <td><input type="number" ng-model="student.filipino">
+                    </tr>
+                    <tr>
+                        <td>TLE:
+                        <td><input type="number" ng-model="student.tle">
+                    </tr>
+            </table>
+            <br><br>  
+
+            <h3>Output Data:</h3>
+            <table>
+                <th>Student Details:
+                <tr>
+                    <td>Your full name is:
+                    <td>{{student.fullName()}}
+                </tr>
+                <tr>
+                    <td>Your strand, grade level and school is:
+                    <td>{{student.schoolStatus()}}
+                </tr>
+                <th>Student's Grades:
+                <tr>
+                    <td>The status of your grades are:
+                    <td>{{student.gradeStatus()}}
+                </tr>
+            </table>
+        </div>
     </body>
 </html>
